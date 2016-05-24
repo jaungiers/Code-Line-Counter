@@ -37,8 +37,14 @@ outTab('FILE TYPE')
 stdout.write(' | ')
 outTab('LINE COUNT')
 stdout.write('\n')
+total = 0
 for ext, lCount in extDic.iteritems():
 	outTab(ext)
 	stdout.write(' | ')
 	outTab(lCount)
 	stdout.write('\n')
+	total += lCount
+outTab('TOTAL')
+stdout.write(' | ')
+outTab(total)
+stdout.write('\n')
